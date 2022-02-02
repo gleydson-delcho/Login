@@ -1,6 +1,6 @@
 import {MigrationInterface, QueryRunner, Table} from "typeorm";
-
-export class CreateUser1643397324079 implements MigrationInterface {
+// Deve ser utilizado npm run typeorm migration:run
+export class CreateUser1643743960581 implements MigrationInterface {
 
     public async up(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.createTable(
@@ -14,18 +14,16 @@ export class CreateUser1643397324079 implements MigrationInterface {
                     },
                     {
                         name: "name",
-                        type: "varchar(200)",
-                        isUnique: true
+                        type: "varchar(200)"
                     },
                     {
                         name: "email",
                         type: "varchar(200)",
-                        isUnique: true,                        
+                        isUnique: true
                     },
                     {
                         name: "password",
-                        type: "varchar(50)",
-                        isUnique: true
+                        type: "varchar(50)"
                     },
                     {
                         name: "created_at",
@@ -33,11 +31,9 @@ export class CreateUser1643397324079 implements MigrationInterface {
                         default: "now()"
                     }
                 ]
-                
             })
-        )
+        );
     }
-
 
     public async down(queryRunner: QueryRunner): Promise<void> {
         await queryRunner.dropTable("users");
