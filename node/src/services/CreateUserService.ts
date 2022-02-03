@@ -24,7 +24,6 @@ export class CreateUserService {
       password : hashedPassword
     })
 
-
     await repo.save(user);
     return user;
   }

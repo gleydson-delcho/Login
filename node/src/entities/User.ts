@@ -1,6 +1,5 @@
 import { Entity, Column, CreateDateColumn, PrimaryColumn, BeforeInsert, BeforeUpdate} from "typeorm";
 import { v4 as uuid } from "uuid";
-import bcrypt from 'bcrypt';
 
 @Entity("users")
 export class User {
