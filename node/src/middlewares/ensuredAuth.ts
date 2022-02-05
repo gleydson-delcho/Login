@@ -5,7 +5,7 @@ export const ensureAuth = () => {
   return async (request: Request, response: Response, next: NextFunction) => {
     const authHeaders = request.headers.authorization;
 
-    if(!authHeaders) {
+    if(!authHeaders || undefined) {
       return response.status(401).json({error: "Token expired or missing"})
     }
     const [, token] = authHeaders.split(" ");
