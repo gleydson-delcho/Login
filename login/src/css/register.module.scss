@@ -26,11 +26,15 @@
       
     }
   }
-
+  .buttonOptions {
+    display: flex;
+  }
+  
   button {
       width: 100%;
       height: 2rem;
 
+      margin: 0 0.2rem;
       border: none;
 
       border-radius: 1rem;

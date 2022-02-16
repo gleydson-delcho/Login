@@ -30,6 +30,6 @@ export class SessionService {
     });
     
 
-    return {email, auth: true, token};
+    return {user: {id: user.id, email: user.email, name: user.name}, auth: true, token};
   }
 }

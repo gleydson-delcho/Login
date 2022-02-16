@@ -78,7 +78,10 @@ export const Register: React.FC = () => {
           <label htmlFor="Repeatpass">Repetir senha</label>
           <input name="repeatPassword" type="password" required onChange={e => { setRepeatPass(e.target.value) }} />
 
+          <section className={Styles.buttonOptions}>
           <button type="submit" onClick={() => register}>Cadastrar</button>
+          <button onClick={() => navigate("/")}>Cancelar</button>
+          </section>
         </form>
       </div>
     </>
